@@ -1,0 +1,7 @@
+game: main.o code.o 
+	gcc -o game main.o code.o  -lSDL -lSDL_image -lSDL_ttf
+main.o: main.c 
+	gcc -c main.c	
+code.o: code.c 
+	gcc -c code.c
+
