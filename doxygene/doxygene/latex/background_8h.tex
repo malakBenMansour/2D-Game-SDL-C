@@ -1,0 +1,142 @@
+\hypertarget{background_8h}{}\section{background.\+h File Reference}
+\label{background_8h}\index{background.\+h@{background.\+h}}
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\\*
+Include dependency graph for background.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{background_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{background_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structbackground}{background}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries C\+A\+M\+E\+R\+A\+\_\+W}~100\hypertarget{background_8h_acc99d1c971ce72f6924532f810863aa8}{}\label{background_8h_acc99d1c971ce72f6924532f810863aa8}
+
+\item 
+\#define {\bfseries C\+A\+M\+E\+R\+A\+\_\+H}~200\hypertarget{background_8h_ad1e8009af56472a7a1972883b0cca62a}{}\label{background_8h_ad1e8009af56472a7a1972883b0cca62a}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structbackground}{background} {\bfseries background}\hypertarget{background_8h_ac7ec97684ccd0aaa88e134ebcc2478bb}{}\label{background_8h_ac7ec97684ccd0aaa88e134ebcc2478bb}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{background_8h_a78e1c93646d00d2c16bb3533cf18cf34}{init\+Bckg} (\hyperlink{structbackground}{background} $\ast$b, char url\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em To initialize the background b . \end{DoxyCompactList}\item 
+void \hyperlink{background_8h_a74cde2d2df1f88fdb2e0ba62193f124c}{show\+Bckg} (S\+D\+L\+\_\+\+Surface $\ast$screen, \hyperlink{structbackground}{background} b)
+\begin{DoxyCompactList}\small\item\em To show the background b . \end{DoxyCompactList}\item 
+void \hyperlink{background_8h_ae325b42fa1f2e50ce1eb289d21b2a372}{scroll\+To\+Left} (\hyperlink{structbackground}{background} $\ast$b)
+\begin{DoxyCompactList}\small\item\em To scroll the background to the left . \end{DoxyCompactList}\item 
+void \hyperlink{background_8h_a6ee97702bdd9933893a41c34fa2c2aca}{scroll\+To\+Right} (\hyperlink{structbackground}{background} $\ast$b)
+\begin{DoxyCompactList}\small\item\em To scroll the background to the right . \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+wael 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Mai 14, 2020 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{background.\+h@{background.\+h}!init\+Bckg@{init\+Bckg}}
+\index{init\+Bckg@{init\+Bckg}!background.\+h@{background.\+h}}
+\subsubsection[{\texorpdfstring{init\+Bckg(background $\ast$b, char url[])}{initBckg(background *b, char url[])}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Bckg (
+\begin{DoxyParamCaption}
+\item[{{\bf background} $\ast$}]{b, }
+\item[{char}]{url\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{background_8h_a78e1c93646d00d2c16bb3533cf18cf34}{}\label{background_8h_a78e1c93646d00d2c16bb3533cf18cf34}
+
+
+To initialize the background b . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & the background \\
+\hline
+{\em url} & the url of the image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\index{background.\+h@{background.\+h}!scroll\+To\+Left@{scroll\+To\+Left}}
+\index{scroll\+To\+Left@{scroll\+To\+Left}!background.\+h@{background.\+h}}
+\subsubsection[{\texorpdfstring{scroll\+To\+Left(background $\ast$b)}{scrollToLeft(background *b)}}]{\setlength{\rightskip}{0pt plus 5cm}void scroll\+To\+Left (
+\begin{DoxyParamCaption}
+\item[{{\bf background} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{background_8h_ae325b42fa1f2e50ce1eb289d21b2a372}{}\label{background_8h_ae325b42fa1f2e50ce1eb289d21b2a372}
+
+
+To scroll the background to the left . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & the background \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\index{background.\+h@{background.\+h}!scroll\+To\+Right@{scroll\+To\+Right}}
+\index{scroll\+To\+Right@{scroll\+To\+Right}!background.\+h@{background.\+h}}
+\subsubsection[{\texorpdfstring{scroll\+To\+Right(background $\ast$b)}{scrollToRight(background *b)}}]{\setlength{\rightskip}{0pt plus 5cm}void scroll\+To\+Right (
+\begin{DoxyParamCaption}
+\item[{{\bf background} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{background_8h_a6ee97702bdd9933893a41c34fa2c2aca}{}\label{background_8h_a6ee97702bdd9933893a41c34fa2c2aca}
+
+
+To scroll the background to the right . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & the background \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\index{background.\+h@{background.\+h}!show\+Bckg@{show\+Bckg}}
+\index{show\+Bckg@{show\+Bckg}!background.\+h@{background.\+h}}
+\subsubsection[{\texorpdfstring{show\+Bckg(\+S\+D\+L\+\_\+\+Surface $\ast$screen, background b)}{showBckg(SDL_Surface *screen, background b)}}]{\setlength{\rightskip}{0pt plus 5cm}void show\+Bckg (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{screen, }
+\item[{{\bf background}}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{background_8h_a74cde2d2df1f88fdb2e0ba62193f124c}{}\label{background_8h_a74cde2d2df1f88fdb2e0ba62193f124c}
+
+
+To show the background b . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scren} & the screen \\
+\hline
+{\em b} & the background \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
