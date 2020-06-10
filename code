@@ -1,0 +1,91 @@
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include <SDL/SDL_mixer.h>
+#include "defs.h"
+#include "background.h"
+#include "personnage.h"
+#include "jouer.h"
+#include "scrolling.h"
+#include "scorevie.h"
+#include "enigme.h"
+#include "collision.h"
+
+int initialiser (jeu *game)
+{
+
+    Mix_Music *musique;
+    Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024);
+    musique = Mix_LoadMUS("./menu/bip.mp3");
+    Mix_PlayMusic(musique, -1);
+    Mix_AllocateChannels(10);
+    Mix_Chunk *mouseEffect = Mix_LoadWAV("./menu/button16.wav");
+    Mix_VolumeChunk(mouseEffect, 100);
+    Mix_VolumeMusic(MIX_MAX_VOLUME);
+    Mix_PauseMusic();
+    initBackground(&(game->B1));
+    initBackground(&(game->B3));
+    init_perso(&(game->p1));
+    init_perso2(&(game->p2));
+    initscore_et_vie2(&(game->s2), &(game->v2));
+    initBackground(&(game->B2));
+
+    initscore_et_vie1(&(game->s1), &(game->v1));
+    init_temps(&(game->t1));
+    init_temps2(&(game->t2));
+    init(&(game->e));
+    game->game_over = 0;
+    game->time_over = 0;
+    game->time_over2 = 0;
+    game->i = 5;
+
+    //chargerBackgroundCollision(&(game->m1));
+    game->col1.backgroundImg=IMG_Load("maps/map1.png");
+    
+
+
+
+    init_enigmes(game->tabl,game->tableau);
+    
+}
+
+
+void test(jeu *game)
+{
+
+
+    
+    if(game->t1.tempsres <= 0)
+    {
+        game->time_over = 1;
+        game->B1.backgroundImg = IMG_Load("./maps/gameover.jpg");
+
+    }
+    if(game->t2.tempsres <= 0)
+    {
+        game->time_over = 2;
+        game->B2.backgroundImg = IMG_Load("./maps/gameover.jpg");
+
+    }
+
+    if(game->v1.vie_restante == 0)
+    {
+        game->B1.backgroundImg = IMG_Load("./maps/gameover.jpg");
+     game->p1.position.x=7000;
+      game->time_over = 1;
+
+    }
+
+    /*if(game->v2.vie_restante==0)
+    	{game->B2.backgroundImg=IMG_Load("./maps/gameover.jpg");}*/
+    
+    
+    if(game->v1.vie_restante == 0  && game->v2.vie_restante == 0)
+    {
+        game->game_over = 1;
+    }
+     
+
+
+
+}
+
