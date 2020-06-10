@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "collision.h"
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include <SDL/SDL_mixer.h>
+#include <string.h>
+#include <time.h>
+#include <SDL/SDL_ttf.h>
+
+
+SDL_Color GetPixel (SDL_Surface *fond_collision,int x,int y)
+{
+
+SDL_Color color;
+Uint32 col =0;
+//printf("entrer GetPixel\n" );
+
+//SDL_LockSurface(fond_collision);
+
+char* pPosition = (char*) fond_collision->pixels ;
+
+pPosition +=(fond_collision->pitch * y);
+
+pPosition +=(fond_collision->format->BytesPerPixel * x);
+
+//printf("avant memcpy : %d\n",fond_collision->format->BytesPerPixel );
+memcpy(&col,pPosition,fond_collision->format->BytesPerPixel);
+//printf("avant get rgb\n" );
+
+
+SDL_GetRGB(col,fond_collision->format , &color.r , &color.g , &color.b );
+//printf("apres get rgb\n" );
+//SDL_UnlockSurface(fond_collision);
+//printf("r: %d,g: %d , b: %d \n",color.r,color.g,color.b );
+return(color);
+} 
+
+
+
+int check_collision(SDL_Surface *ecran,SDL_Rect pos,int sens,SDL_Surface *fond_collision)
+{
+int x,y;
+
+//if (jouer ==1)
+//{
+x=pos.x; //565
+y=pos.y;  //430
+//}
+
+/*if (jouer==2)
+{
+	x=p.camera.x+300.5 ; //565
+y=p.camera.y+500 ;  //430
+}*/
+
+switch(sens)
+{
+			case 1 : 
+			 //y--;
+y=y;
+			break ; 
+
+			case 2:
+			 //y++;
+y=(y+pos.h);
+			break;
+
+			case 3 : 
+			 x=(x+pos.w);
+			break ; 
+
+			case 4:
+			 //x--;
+x=x;
+			break;
+
+
+}
+SDL_Color couleur=GetPixel (ecran,x,y);
+
+if ((couleur.r==255)&&(couleur.g==255)&&(couleur.b==255))
+{
+	return (1) ;
+}
+if ((couleur.r==255)&&(couleur.g==0)&&(couleur.b==0))
+return(2);
+
+else return (0) ;
+}
