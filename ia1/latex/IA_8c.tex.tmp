@@ -1,0 +1,32 @@
+\hypertarget{IA_8c}{}\section{I\+A.\+c File Reference}
+\label{IA_8c}\index{I\+A.\+c@{I\+A.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}I\+A.\+h\char`\"{}}\newline
+Include dependency graph for I\+A.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{IA_8c_ad8dbdd1cb8166fa8530aa3f7143c5f41}\label{IA_8c_ad8dbdd1cb8166fa8530aa3f7143c5f41}} 
+void {\bfseries intialiser} (\hyperlink{structObjet}{Objet} $\ast$perso, \hyperlink{structObjet}{Objet} $\ast$zombie)
+\item 
+\mbox{\Hypertarget{IA_8c_a977769899c65d9b22b4a5cbde4c3c74e}\label{IA_8c_a977769899c65d9b22b4a5cbde4c3c74e}} 
+void {\bfseries setup} (S\+D\+L\+\_\+\+Surface $\ast$screen, \hyperlink{structObjet}{Objet} $\ast$objet1, \hyperlink{structObjet}{Objet} $\ast$objet2)
+\item 
+\mbox{\Hypertarget{IA_8c_aadda18ab7580865447873b458c422eff}\label{IA_8c_aadda18ab7580865447873b458c422eff}} 
+void {\bfseries calculer\+\_\+centre\+\_\+rayon} (\hyperlink{structObjet}{Objet} $\ast$objet1, \hyperlink{structObjet}{Objet} $\ast$objet2)
+\item 
+\mbox{\Hypertarget{IA_8c_a6d26d6ae199b28eda68207e97d750518}\label{IA_8c_a6d26d6ae199b28eda68207e97d750518}} 
+float {\bfseries calculer\+\_\+distance} (\hyperlink{structObjet}{Objet} $\ast$objet1, \hyperlink{structObjet}{Objet} $\ast$objet2)
+\item 
+\mbox{\Hypertarget{IA_8c_a5ff7548e046a7ffb8c7924139d8d401f}\label{IA_8c_a5ff7548e046a7ffb8c7924139d8d401f}} 
+int {\bfseries verif\+\_\+collision} (\hyperlink{structObjet}{Objet} $\ast$objet1, \hyperlink{structObjet}{Objet} $\ast$objet2, float D1)
+\item 
+\mbox{\Hypertarget{IA_8c_a326070ea1c05e146d232d831d8b31add}\label{IA_8c_a326070ea1c05e146d232d831d8b31add}} 
+void {\bfseries deplacement\+\_\+objet} (\hyperlink{structObjet}{Objet} $\ast$\hyperlink{structobjet}{objet}, int $\ast$running)
+\end{DoxyCompactItemize}

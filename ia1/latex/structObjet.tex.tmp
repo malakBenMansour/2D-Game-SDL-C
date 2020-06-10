@@ -1,0 +1,26 @@
+\hypertarget{structObjet}{}\section{Objet Struct Reference}
+\label{structObjet}\index{Objet@{Objet}}
+
+
+Collaboration diagram for Objet\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structObjet_a0dac95199f82a456854968bfe257a14e}\label{structObjet_a0dac95199f82a456854968bfe257a14e}} 
+S\+D\+L\+\_\+\+Surface $\ast$ {\bfseries img}
+\item 
+\mbox{\Hypertarget{structObjet_aa96c8e462a0637c98ab3c192e7f1806a}\label{structObjet_aa96c8e462a0637c98ab3c192e7f1806a}} 
+S\+D\+L\+\_\+\+Rect {\bfseries pos}
+\item 
+\mbox{\Hypertarget{structObjet_a5ca2a21e73d9832faccdffca0466574f}\label{structObjet_a5ca2a21e73d9832faccdffca0466574f}} 
+\hyperlink{structCircle}{Circle} {\bfseries c}
+\item 
+\mbox{\Hypertarget{structObjet_a22b5f8635c29778f8a669585ec6ed6fd}\label{structObjet_a22b5f8635c29778f8a669585ec6ed6fd}} 
+S\+D\+L\+\_\+\+Rect {\bfseries pos\+\_\+text}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+I\+A.\+h\end{DoxyCompactItemize}
